@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { BehaviorSubject } from 'rxjs';
 import { CartModalPage } from '../pages/cart-modal/cart-modal.page';
 import { CartService } from '../servicios/cart.service';
+import { AuthService } from "../servicios/auth.service";
 
 
 
@@ -20,7 +21,7 @@ export class CpedidoPage implements OnInit {
 
   @ViewChild('cart', {static: false, read: ElementRef}) fab: ElementRef;
 
-  constructor(private cartService: CartService, private modalCtrl: ModalController ) { }
+  constructor(public AuthService : AuthService, private cartService: CartService, private modalCtrl: ModalController ) { }
 
   ngOnInit() {
     this.platos = this.cartService.getPlatos();
@@ -57,5 +58,10 @@ export class CpedidoPage implements OnInit {
       node.removeEventListener('animationend', handleAnimationEnd)
     }
     node.addEventListener('animationend', handleAnimationEnd)
+  }
+
+  Onlogout(){
+    this.AuthService.logout();
+
   }
 }

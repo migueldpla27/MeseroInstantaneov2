@@ -7,6 +7,20 @@
 
 <ion-content>
 
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img src="https://picsum.photos/200/300?random=1"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h1>Bienvenido</h1>
+        <h2>User.!</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <br>
+
   <ion-fab vertical="top" horizontal="end" slot="fixed">
     <ion-fab-button (click)="openCart()" #cart>
       <div class="cart-length">{{ cartItemCount  | async }}</div>
@@ -38,4 +52,6 @@
      </ion-card-content>
   </ion-card>
  </ion-list>
+ <ion-button (click)="Onlogout()">Desconectarse</ion-button>
 </ion-content>
+
