@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from "../servicios/auth.service";
+import { NavController } from "@ionic/angular";
+
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,12 @@ import { AuthService } from "../servicios/auth.service";
 })
 export class HomePage {
 
-    constructor(public AuthService : AuthService) {}
+    constructor(public AuthService : AuthService, public navCtrl: NavController) {}
 
     Onlogout(){
       this.AuthService.logout();
 
     }
+
+  
 }

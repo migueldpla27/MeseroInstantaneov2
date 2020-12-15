@@ -18,6 +18,18 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./compononetes/login/login.module').then( m => m.LoginPageModule), canActivate : [NologinGuard]
   },
+  {
+    path: 'lista-platos',
+    loadChildren: () => import('./lista-platos/lista-platos.module').then( m => m.ListaPlatosPageModule)
+  },
+  {
+    path: 'cpedido',
+    loadChildren: () => import('./cpedido/cpedido.module').then( m => m.CpedidoPageModule)
+  },
+  {
+    path: 'cart-modal',
+    loadChildren: () => import('./pages/cart-modal/cart-modal.module').then( m => m.CartModalPageModule)
+  },
 ];
 
 @NgModule({

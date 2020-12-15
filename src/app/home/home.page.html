@@ -5,7 +5,7 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
+<br>
 
 <ion-content padding>
   <ion-img width="80" height="80" class="icon" src="assets/icon/logoMI2.png"></ion-img>
@@ -17,10 +17,13 @@
 <ion-col>
   
 <!-- Expand -->
-<ion-button expand="block" color="light"> Listas de Platos </ion-button>
+<ion-button expand="block" color="light" href="" routerLink="/lista-platos"> Listas de Platos </ion-button>
+  <br>
 <ion-button expand="block" color="light"> Listas de Pedidos </ion-button>
+<br>
 <ion-button expand="block" color="light"> Configuracion </ion-button>
-<ion-button expand="block" color="light"> Salir </ion-button>
+<br>
+<ion-button expand="block" color="light" (click)="Onlogout()"> Salir </ion-button>
 
 </ion-col>
     <!-- <ion-button (click)="Onlogout()">Desconectarse</ion-button> !-->
